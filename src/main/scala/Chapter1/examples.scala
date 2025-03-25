@@ -1,10 +1,9 @@
 package Chapter1
 
-
 object examples {
 
   @main
-  def main(): Unit = {
+  def eg(): Unit = {
     val menuOption: Int = scala.io.StdIn.readLine("""
   Welcome to SOFP Chapter 1 Examples and Exercises!
   Please select an option below to see the solutions output:

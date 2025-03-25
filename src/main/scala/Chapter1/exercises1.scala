@@ -1,6 +1,7 @@
+package Chapter1
 
 @main()
-def test() = {
+def exercises() = {
   println("--" * 25 + "\n" * 5)
   ex1()
   ex2()

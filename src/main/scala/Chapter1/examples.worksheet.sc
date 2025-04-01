@@ -158,4 +158,33 @@ average(List(1.0, 2.0, 3.0))
   p(test, (k => 5*k + 1))
 }
 
+// 1.4.2 Transformations
+// 1.4.2.1 Given a list of lists, s: List[List[Int]], select the inner lists of
+// size at least 3. The result must be again of type List[List[Int]].
+{
+  def res(l: List[List[Int]]): List[List[Int]] = 
+    l.filter(k => k.size >= 3)
 
+  val test: List[List[Int]] = List(List(1, 2), (1 to 3).toList, List(1), List(4,4, 4, 4))
+  res(test)
+}
+
+
+// 1.4.2.2 Find all integers k in range [1, 10] such that there are at least 
+// three different integers j, where 1 <= j <= k, each j satisfying the
+// condition j * j > 2 * k. 
+{
+  val inner, outer = (1 to 10)
+  outer.filter(j => inner.exists(k => j <= k && j * j > 2 * k))
+}
+// Sol'n from the book
+{
+  (1 to 10).toList.filter(k =>
+      (1 to k).filter(j => j * j > 2*k).length >= 3)
+}
+
+// My troubleshooting efforts on Apr 1, 2025
+{
+  (1 to 10).toList.map(k =>
+      (1 to k).filter(j => j * j > 2*k))
+}

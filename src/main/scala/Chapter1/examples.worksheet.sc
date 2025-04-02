@@ -184,6 +184,8 @@ average(List(1.0, 2.0, 3.0))
 }
 
 // My troubleshooting efforts on Apr 1, 2025
+// Received my response later today and my math needs work
+// or I need to work more math. 
 {
   (1 to 10).toList.map(k =>
       (1 to k).filter(j => j * j > 2*k))

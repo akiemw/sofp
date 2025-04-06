@@ -82,3 +82,74 @@
 
   println(s"The LHS = $lhs is equal to the RHS = $rhs up to $significantDigits significant digits.")
 }
+
+
+// 1.6.2 Transformations
+//
+// 1.6.2.1 Define a function `add20` of type `List[List[Int]] => List[List[Int]]`
+// that adds 20 to every element of every inner list. 
+{
+  def add20(list: List[List[Int]]): List[List[Int]] = 
+    list.map(outer => outer.map(inner => inner + 20))
+
+  val test = List((1 to 3).toList, (2 to 10 by 2).toList)
+  add20(test)
+}
+
+// 1.6.2.2 An integer `n` is called a "3-factor" if it divisible by only three 
+// different integers `i, j, k` such that `1 < i < j < k < n`. Compute the set
+// of all "3-factor" integers n among `n in Range(1, 10001)`. 
+{
+  def countFactors(n: Int): Int =
+    (2 to n-1).count(k => n % k == 0)
+
+  (1 to 1000).filter(k => countFactors(k) == 3).foreach(println)
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

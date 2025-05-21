@@ -38,6 +38,7 @@ object examples {
       .takeWhile(k => k * k <= n)
       .forall(k => n % k != 0)
   }
+
   def ex1(): Unit = { 
     def isPrime(n: Int) = {
       (2 to n-1)

@@ -16,3 +16,4 @@ println(sol(test))
 (1 to 10).filter(k => 
     (1 to k).filter(j => j * j > 2 * k).length >= 3)
 
+// Jun 5, 2025 - Restarted SOFP from beginning of the book

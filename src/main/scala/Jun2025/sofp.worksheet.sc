@@ -18,3 +18,16 @@ val fac = (n: Int) => (1 to n).product
 fac(10)
 
 ((n: Int) => (1 to n).product)(10)
+
+def isEven(k: Int): Int = (k % 2) match {
+  case 0 => 1
+  case _ => 0
+}
+
+isEven(12)
+isEven(13)
+
+def isPrime(n: Int): Boolean = {
+  (2 to n -1)
+    .takeWhile(k => k * k <= )
+}

@@ -1,6 +1,6 @@
 # macOS
 .DS_Store
-
+.scala-build/
 # sbt specific
 dist/*
 target/
